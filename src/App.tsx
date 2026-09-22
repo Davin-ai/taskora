@@ -1,12 +1,8 @@
-import './App.css'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './app/router'
 
 function App() {
-  return (
-    <main className="app">
-      <h1>Taskora</h1>
-      <p>Manage your projects and tasks in one place.</p>
-    </main>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
