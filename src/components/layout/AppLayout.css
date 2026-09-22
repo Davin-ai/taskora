@@ -1,0 +1,43 @@
+.app-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  padding: 2rem 1rem;
+  color: white;
+  background-color: #0f172a;
+}
+
+.sidebar__logo {
+  margin: 0 0 2rem;
+  padding: 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+.sidebar__nav {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.sidebar__nav a {
+  padding: 0.75rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.sidebar__nav a:hover {
+  color: white;
+  background-color: #1e293b;
+}
+
+.sidebar__nav a.active {
+  color: white;
+  background-color: #2563eb;
+}
+
+.main-content {
+  padding: 2rem;
+}
