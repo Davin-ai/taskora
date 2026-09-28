@@ -1,0 +1,57 @@
+.project-detail { color: #17243b; }
+.project-breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; color: #76839c; font-size: 12px; margin-bottom: 24px; }
+.project-breadcrumb a, .project-missing a { color: #6856db; text-decoration: none; }
+.project-detail__header { display: flex; align-items: center; gap: 15px; }
+.project-detail__header > div { min-width: 0; }
+.project-detail__header h1 { margin: 0 0 7px; font-size: clamp(23px, 2.5vw, 31px); letter-spacing: -.7px; overflow-wrap: anywhere; }
+.project-detail__header p { margin: 0; color: #6c7f9c; font-size: 13px; line-height: 1.6; }
+.project-detail__summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; padding: 20px 0; border-bottom: 1px solid #e2e8f3; }
+.project-detail__summary > span, .project-detail__summary > div { display: flex; align-items: center; gap: 10px; font-size: 12px; color: #607394; }
+.project-detail__summary svg { width: 18px; color: #7762eb; }
+.project-detail__summary progress { appearance: none; width: 140px; height: 7px; border: 0; border-radius: 6px; overflow: hidden; background: #e3e9f4; }
+.project-detail__summary progress::-webkit-progress-bar { background: #e3e9f4; }
+.project-detail__summary progress::-webkit-progress-value { background: #22c4a4; }
+.project-detail__summary progress::-moz-progress-bar { background: #22c4a4; }
+.project-detail__demo { font-size: 11px; color: #7c879d; line-height: 1.7; margin: 15px 0 24px; }
+.board-toolbar { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+.board-toolbar > .field { flex: 1; min-width: 180px; max-width: 400px; }
+.board-toolbar label { font-size: 12px; color: #526684; }
+.board-toolbar input, .board-toolbar select { font-size: 12px; background: #fff; }
+.board-priority-filter { display: grid; gap: 8px; }
+.board-priority-filter select { padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; color: #344864; }
+.board-priority-filter select:focus-visible { outline: 2px solid #8372ff; outline-offset: 3px; }
+.board-toolbar .button { font-size: 12px; }
+.board-result-count { margin: 20px 0 14px; font-size: 11px; color: #71819d; }
+.board-empty-result { padding: 18px; font-size: 13px; background: #fff; border: 1px dashed #cbd5e1; border-radius: 9px; color: #526684; }
+.task-board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.task-column { min-width: 0; border: 1px solid #e0e7f1; border-radius: 12px; background: #eef2f8; overflow: hidden; }
+.task-column > header { display: flex; align-items: center; gap: 9px; padding: 16px; }
+.task-column h2 { margin: 0; font-size: 13px; font-weight: 650; }
+.task-column > header > span { font-size: 11px; color: #627697; background: #ffffffb0; border-radius: 5px; padding: 2px 6px; }
+.task-column--in-progress { background: #eef4ff; border-color: #dce7ff; }
+.task-column--in-progress > header { background: #e5edff; }
+.task-column--done { background: #eef9f6; border-color: #d5eee7; }
+.task-column--done > header { background: #dff4ed; }
+.task-column__cards { padding: 0 10px 12px; display: grid; gap: 11px; }
+.task-column__empty { color: #7888a0; font-size: 12px; text-align: center; border: 1px dashed #ccd7e7; padding: 25px 10px; border-radius: 8px; margin: 0; }
+.project-missing { text-align: center; padding: 60px 20px; }
+.project-missing > svg { color: #8675ed; width: 40px; height: 40px; }
+.project-missing p { color: #6c7f9c; line-height: 1.6; }
+@media (max-width: 1100px) { .task-board { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 700px) {
+  .board-toolbar { gap: 12px; }
+  .board-toolbar > .field { flex-basis: 100%; max-width: none; }
+  .board-priority-filter { flex: 1; }
+  .project-detail__summary { align-items: flex-start; flex-direction: column; }
+  .project-detail__header { align-items: flex-start; }
+  .task-card { padding: 16px; }
+}
+
+.project-detail__header { flex-wrap: wrap; }
+.project-add-task.button { margin-left: auto; font-size: 12px; background: #6856ec; color: white; }
+.column-add-task.button { display: block; width: calc(100% - 20px); margin: 0 10px 12px; background: transparent; color: #627599; border: 1px dashed #cbd5e1; font-size: 11px; }
+@media (max-width: 480px) { .project-add-task.button { margin-left: 0; } }
+
+.task-column--drop-target { outline: 2px dashed #7864ed; outline-offset: 3px; background: #e9e4ff; }
+.task-column__cards { min-height: 90px; }
+.board-move-message { padding: 12px 14px; background: #edeafa; color: #594b9e; font-size: 12px; line-height: 1.7; border-radius: 8px; overflow-wrap: anywhere; }

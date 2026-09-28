@@ -25,3 +25,43 @@
   border: 1px solid #cbd5e1;
   border-radius: 0.5rem;
 }
+.button--primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.button--secondary:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+.button:focus-visible,
+.input:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  color: #0f172a;
+  background: #fff;
+}
+
+.input:disabled {
+  color: #64748b;
+  background: #e2e8f0;
+  cursor: not-allowed;
+}
+
+.input[aria-invalid='true'] {
+  border-color: #b91c1c;
+}
+
+.field__error {
+  color: #b91c1c;
+  font-size: 0.875rem;
+}

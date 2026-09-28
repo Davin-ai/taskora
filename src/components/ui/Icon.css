@@ -1,0 +1,9 @@
+.icon-tile { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 13px; flex-shrink: 0; }
+.icon-tile--round { width: 51px; height: 51px; border-radius: 50%; }
+.icon-tile--round svg { width: 25px; height: 25px; }
+.tone-purple { color: #7950ea; background: #f0eaff; }
+.tone-blue { color: #3977ff; background: #e9f0ff; }
+.tone-green { color: #0bb795; background: #e0f8f1; }
+.tone-pink { color: #ff4269; background: #ffeaf0; }
+.tone-cyan { color: #009cbb; background: #e0f6fd; }
+.tone-orange { color: #f3951b; background: #fff3e2; }

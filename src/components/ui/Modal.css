@@ -1,0 +1,22 @@
+.modal { width: min(560px, calc(100vw - 32px)); max-height: calc(100dvh - 40px); padding: 24px; border: 1px solid #e3e9f4; border-radius: 16px; color: #17243b; box-shadow: 0 20px 80px #10213c30; overflow-y: auto; }
+.modal::backdrop { background: #10213c80; backdrop-filter: blur(3px); }
+.modal__header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.modal__header h2 { margin: 0; font-size: 21px; }
+.modal__header .button { display: grid; place-items: center; padding: 6px; background: #f1f3f9; }
+.task-form { display: grid; gap: 18px; }
+.task-form label { font-size: 12px; color: #536784; }
+.task-form textarea, .task-form select { font: inherit; font-size: 13px; padding: 11px; border: 1px solid #cbd5e1; border-radius: 8px; background: white; color: #17243b; width: 100%; min-width: 0; }
+.task-form textarea { min-height: 95px; resize: vertical; }
+.task-form textarea:focus-visible, .task-form select:focus-visible { outline: 2px solid #8372ff; outline-offset: 3px; }
+.task-form__row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.task-form__error { margin: 0; font-size: 12px; color: #b91c1c; }
+.modal__actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+.modal__actions .button--primary { background: #6856ec; }
+.modal__actions .button--danger { color: white; background: #c73551; }
+.modal__description { color: #657795; font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
+@media (max-width: 480px) { .task-form__row { grid-template-columns: minmax(0, 1fr); } .modal { padding: 20px; } }
+
+@media (max-width: 700px) {
+  .modal :is(input, select, textarea) { font-size: 16px; }
+  .modal__header .button { min-width: 44px; min-height: 44px; }
+}

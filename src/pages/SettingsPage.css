@@ -1,0 +1,31 @@
+.settings-page { max-width: 1000px; color: #17243b; }
+.settings-page > header { margin-bottom: 28px; }
+.settings-page > header > span { font-size: 10px; color: #81769c; letter-spacing: 1.6px; }
+.settings-page h1 { font-size: clamp(28px, 3vw, 36px); letter-spacing: -1px; margin: 10px 0; }
+.settings-page > header p { color: #687c9e; font-size: 13px; line-height: 1.7; }
+.settings-page form { display: grid; gap: 20px; }
+.settings-page section { background: #ffffffd9; border: 1px solid #e3e9f4; border-radius: 14px; padding: 24px; }
+.settings-page h2 { font-size: 18px; margin: 0 0 18px; }
+.settings-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 0; border-top: 1px solid #edf0f7; }
+.settings-row label { color: #344864; font-size: 13px; }
+.settings-row small { display: block; color: #74839d; font-size: 11px; line-height: 1.7; margin-top: 7px; }
+.settings-row select { border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px 12px; background: white; color: #344864; font-size: 12px; min-width: 115px; }
+.settings-row input { width: 20px; height: 20px; flex-shrink: 0; accent-color: #6856ec; }
+.settings-row :is(select, input):focus-visible { outline: 2px solid #8372ff; outline-offset: 3px; }
+.settings-page section > a { display: inline-block; font-size: 12px; color: #6856ec; text-decoration: none; margin-top: 8px; }
+.settings-preview { display: grid; gap: 16px; padding: 22px; background: #f6f7fd; border: 1px dashed #d1d8ea; border-radius: 8px; }
+.settings-preview strong { font-size: 12px; }
+.settings-preview span { font-size: 11px; color: #74839d; }
+.settings-preview--compact { gap: 7px; padding: 12px; }
+.settings-note { margin: 0; font-size: 12px; line-height: 1.7; color: #74839d; }
+.settings-message { background: #edf8f2; padding: 12px; border-radius: 8px; color: #426f60; margin: 0; font-size: 12px; }
+.settings-page footer, .settings-page footer > div { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.settings-page footer { justify-content: space-between; }
+.settings-page .button { font-size: 12px; }
+.settings-page .button--primary { background: #6856ec; color: white; }
+@media (max-width: 600px) {
+  .settings-page section { padding: 20px 16px; }
+  .settings-row { gap: 16px; }
+  .settings-row:has(select) { flex-direction: column; align-items: stretch; }
+  .settings-page footer { align-items: flex-start; gap: 16px; }
+}

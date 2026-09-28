@@ -1,0 +1,32 @@
+.task-card { padding: 15px 12px; border-radius: 9px; background: #fff; border: 1px solid #e5ebf5; box-shadow: 0 3px 8px #25365c03; min-width: 0; }
+.task-card summary { cursor: pointer; color: #6255c6; }
+.task-card h3 { display: inline; margin: 0; font-size: 12px; line-height: 1.7; font-weight: 600; color: #1b2941; overflow-wrap: anywhere; }
+.task-card__description { margin: 10px 0; color: #687c98; font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; }
+.task-card__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 15px; }
+.task-priority { text-transform: capitalize; padding: 4px 7px; border-radius: 5px; font-size: 10px; }
+.task-priority--high { color: #c93455; background: #fff0f3; }
+.task-priority--medium { color: #9c6100; background: #fff5dd; }
+.task-priority--low { color: #087c67; background: #e2f8f0; }
+.task-card__date { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-size: 10px; color: #667c9c; }
+.task-card__date svg { width: 12px; height: 12px; }
+.task-card__date--overdue { color: #c93455; }
+.task-card__assignee { display: flex; align-items: center; gap: 7px; color: #75849b; font-size: 10px; margin-top: 15px; }
+.task-card__assignee > span { display: grid; place-items: center; width: 23px; height: 23px; background: #eeebff; color: #6e5ecc; border-radius: 50%; }
+.task-card__status { display: grid; gap: 7px; margin-top: 15px; font-size: 10px; color: #657795; }
+.task-card__status select { padding: 8px; width: 100%; border: 1px solid #dfe5f0; border-radius: 6px; color: #425775; background: #f9faff; font-size: 11px; }
+.task-card__status select:focus-visible { outline: 2px solid #8372ff; outline-offset: 3px; }
+.task-card__actions { display: flex; justify-content: space-between; gap: 10px; margin-top: 12px; }
+.task-card__actions .button { padding: 7px 10px; font-size: 11px; background: #f1f3f9; }
+.task-card__actions .task-card__delete { color: #b8324e; }
+.task-card summary:focus-visible { outline: 2px solid #8372ff; outline-offset: 3px; }
+
+.workspace--compact .task-card { padding: 10px; }
+.workspace--compact .task-card__meta, .workspace--compact .task-card__assignee, .workspace--compact .task-card__status, .workspace--compact .task-card__actions { margin-top: 8px; }
+.workspace--compact .task-card__status select { padding: 5px 8px; }
+
+.task-card[draggable="true"] { cursor: grab; }
+.task-card[data-dragging="true"] { opacity: .45; cursor: grabbing; }
+.task-card__drag-hint { display: flex; align-items: center; gap: 6px; color: #8895ad; font-size: 9px; margin-bottom: 9px; user-select: none; }
+.task-card__drag-hint svg { width: 13px; height: 13px; }
+.task-card :is(select, button, summary) { cursor: pointer; }
+@media (pointer: coarse) { .task-card__drag-hint { display: none; } }
